@@ -233,13 +233,11 @@ hr{
 }
 .text_slider {
     position: absolute;
-    top: 20%;
-    left: 20%;
-    letter-spacing: 1px;
-    font-size: 45px;
+    top: 90%;
+    left: 10%;
+    text-transform: uppercase;
     font-weight: 800;
-    color: #282d30;
-    text-shadow: 0 0 10px #b5b4b4, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fffcff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff9fe, 0 0 150px #fff;
+
 }
 .text_slider h2{
     color: #101010;
