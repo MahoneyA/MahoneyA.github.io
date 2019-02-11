@@ -1,45 +1,4 @@
-$(window).ready(function () {
-        var preloader = $('#preloader'),
-            imagesCount = $('img').length;
-        hscroll= $('body');
-        precent = 100 / imagesCount;
-        progress = 0;
-        loadedImg = 0;
-
-        if (imagesCount>0){
-            preloader.css('background', '#38383a');
-            hscroll.css('overflow', 'hidden');
-
-            $('.progress_bar').circularProgress({
-                color: '#ff5168',
-                line_width:20,
-                height:'350px',
-                width:'350px',
-                percent: 0
-            }).circularProgress('animate', precent, 1800);
-
-            for(var i = 0; i<imagesCount; i++){
-                var img_copy = new Image();
-                img_copy.src = document.images[i].src;
-                img_copy.onload = img_load;
-                img_copy.onerror = img_load;
-            }
-            function img_load() {
-                progress +=precent;
-                loadedImg++;
-                if(progress>=100||loadedImg==imagesCount){
-                    preloader.delay(500).fadeOut('slow');
-                    hscroll.css('overflow','');
-                }
-                $('.progress_bar').circularProgress('animate', progress,1800);
-            }
-        }else {
-            preloader.remove();
-        }
-
-    });
-
-    $(document).ready(function() {
+$(document).ready(function() {
 
         var navPos, winPos, navHeight;
 
