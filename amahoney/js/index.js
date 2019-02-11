@@ -1,38 +1,38 @@
-$(document).ready(function() {
-
-        var navPos, winPos, navHeight;
-
-        function refreshVar() {
-            navPos = $('nav').offset().top;
-            navHeight = $('nav').outerHeight(true);
-        }
-
-        refreshVar();
-        $(window).resize(refreshVar);
-
-        $('<div class="clone-nav"></div>').insertBefore('nav').css('height', navHeight).hide();
-
-        $(window).scroll(function() {
-            winPos = $(window).scrollTop();
-
-            if (winPos >= navPos) {
-                $('nav').addClass('fixed shadow');
-                $('.clone-nav').show();
-            }
-            else {
-                $('nav').removeClass('fixed shadow');
-                $('.clone-nav').hide();
-            }
-        });
-
-    });
-    $(window).scroll(function () {
-        var st=$(this).scrollTop();
-
-        $(".header_text").css({
-            "transform": "translate(0%, -" + st/20 + "%"
-        });
-    });
+// $(document).ready(function() {
+//
+//         var navPos, winPos, navHeight;
+//
+//         function refreshVar() {
+//             navPos = $('nav').offset().top;
+//             navHeight = $('nav').outerHeight(true);
+//         }
+//
+//         refreshVar();
+//         $(window).resize(refreshVar);
+//
+//         $('<div class="clone-nav"></div>').insertBefore('nav').css('height', navHeight).hide();
+//
+//         $(window).scroll(function() {
+//             winPos = $(window).scrollTop();
+//
+//             if (winPos >= navPos) {
+//                 $('nav').addClass('fixed shadow');
+//                 $('.clone-nav').show();
+//             }
+//             else {
+//                 $('nav').removeClass('fixed shadow');
+//                 $('.clone-nav').hide();
+//             }
+//         });
+//
+//     });
+//     $(window).scroll(function () {
+//         var st=$(this).scrollTop();
+//
+//         $(".header_text").css({
+//             "transform": "translate(0%, -" + st/20 + "%"
+//         });
+//     });
 
     $(window).ready(function() {
         var animTime = 4000, // Задержка между слайдами
@@ -107,8 +107,8 @@ $(document).ready(function() {
             }, autoSlideDelay);
         }
     });
-    $(window).ready(function () {
-        $('a[href^="#"]').bind("click", function(e){ var anchor = $(this); $('html, body').stop().animate({ scrollTop: $(anchor.attr("href")).offset().top }, 1000); e.preventDefault();  return false;
-        }
-        );
-    });
+    // $(window).ready(function () {
+    //     $('a[href^="#"]').bind("click", function(e){ var anchor = $(this); $('html, body').stop().animate({ scrollTop: $(anchor.attr("href")).offset().top }, 1000); e.preventDefault();  return false;
+    //     }
+    //     );
+    // });

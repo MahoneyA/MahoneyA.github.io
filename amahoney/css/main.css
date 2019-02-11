@@ -159,9 +159,9 @@ hr{
     position: relative;
     width: 100%;
     margin: 100px 0 100px 0;
-    -webkit-box-shadow: 0 5px 17px -2px var( --mainColor);
-    -moz-box-shadow: 0 5px 17px -2px var( --mainColor);
-    box-shadow: 0 5px 17px -2px var( --mainColor);
+    /*-webkit-box-shadow: 0 5px 17px -2px var( --mainColor);*/
+    /*-moz-box-shadow: 0 5px 17px -2px var( --mainColor);*/
+    /*box-shadow: 0 5px 17px -2px var( --mainColor);*/
 }
 .active{
     z-index: 1;
@@ -229,7 +229,10 @@ hr{
     transform: translate(-50%, -50%) scale(1);
 }
 .slide img{
-    width: 100%;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    max-width: 100%;
 }
 .text_slider {
     position: absolute;
