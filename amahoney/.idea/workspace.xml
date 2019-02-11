@@ -50,8 +50,8 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+                <state relative-caret-position="663">
+                  <caret line="107" column="9" lean-forward="false" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -90,8 +90,8 @@
         <option value="$USER_HOME$/Downloads/index.html" />
         <option value="$PROJECT_DIR$/js/slider.js" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/index.js" />
       </list>
     </option>
   </component>
@@ -137,8 +137,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -304,11 +304,12 @@
       <workItem from="1549881338485" duration="231000" />
       <workItem from="1549886858644" duration="1134000" />
       <workItem from="1549903419415" duration="134000" />
+      <workItem from="1549905675537" duration="75000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171944000" />
+    <option name="totallyTimeSpent" value="172019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
@@ -616,13 +617,7 @@
     <entry file="file://$USER_HOME$/Downloads/react-ui-master/react-ui-master/public/index.html" />
     <entry file="file://$USER_HOME$/Downloads/react-ui-master/react-ui-master/src/index.js" />
     <entry file="file://$USER_HOME$/Downloads/Slider Jquery/Slider Jquery/js/main.js" />
-    <entry file="file://$PROJECT_DIR$/js/plugin.progress.bar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="161" column="98" lean-forward="false" selection-start-line="161" selection-start-column="98" selection-end-line="161" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugin.progress.bar.js" />
     <entry file="file://$USER_HOME$/Downloads/Slider Jquery/Slider Jquery/css/estilos.css" />
     <entry file="file://$USER_HOME$/Downloads/index.html" />
     <entry file="file://$PROJECT_DIR$/js/slider.js" />
@@ -657,8 +652,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state relative-caret-position="663">
+          <caret line="107" column="9" lean-forward="false" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
           <folding />
         </state>
       </provider>

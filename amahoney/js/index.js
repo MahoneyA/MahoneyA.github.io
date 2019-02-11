@@ -45,7 +45,7 @@ $(document).ready(function() {
         });
 
         $(document).ready(function() {
-            $(".slider").height($(".active").height());
+            $(".slider").height($(".active img").height());
 
             index = $('.active').index(".slide");
             $('.slide').eq(index).fadeTo(opacityDelay, 1);
