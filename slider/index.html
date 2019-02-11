@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mega dropdown меню | pcvector.net</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+<style>
+    html{
+        /*height:100%;*/
+        box-sizing: border-box;
+        font-family: Arial;
+        color: #1a1a1a;
+    }
+    body{
+        height:100%;
+        margin: 10px auto 10px auto;
+    }
+    .main-slider {
+        position: relative;
+        /*overflow: hidden;*/
+    }
+    .slider {
+    }
+    .slide {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /*height: 400px;*/
+        opacity: 0;
+    }
+    .slide img {
+        display: block;
+        margin: 0 auto;
+        border: none;
+        max-width: 100%;
+    }
+    /*.active {*/
+    /*opacity: 1;*/
+    /*}*/
+    .navigate {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    .pagi {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        /*right: 0;*/
+        /*margin: 0 auto;*/
+    }
+    .pagi-elem {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 1rem;
+        height: 1rem;
+        margin: 0 0.15rem;
+        border-radius: 50%;
+        border: 2px solid #f00;
+        cursor: pointer;
+    }
+    .pagi-elem:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 0.6rem;
+        height: 0.6rem;
+        background: #f00;
+        border-radius: 50%;
+        transition: transform 0.3s;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    .pagi-elem.current:before,
+    .pagi-elem:hover:before {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+</style>
+<div class="main-slider" style="background: #eee; width: 100%;">
+    <div class="slider">
+        <div class="slide active" style="background: #d0d0d0">
+            <img src="sl10.jpg">
+        </div>
+        <div class="slide" style="background: #d0d0c0">
+            <img src="sl20.jpg">
+        </div>
+        <div class="slide" style="background: #d0d0c0">
+            <img src="sl30.jpg">
+        </div>
+        <!--<div class="slide active" style="background: #d0d0b0"><img src="img/1.jpg" style="display: block; margin: 0 auto; border: none; max-width: 100%">-->
+            <!--<div style="position: absolute; top: 30%; left: 10%">fgrl;gfghgk;trkyl;r</div>-->
+        <!--</div>-->
+        <!--<div class="slide" style="background: #d0d0a0">-->
+            <!--<img src="img/2.jpg" style="display: block; margin: 0 auto; border: none; max-width: 100%">-->
+        <!--</div>-->
+    </div>
+    <div class="navigate">
+        <i class="fas fa-angle-left" id="prev"></i>
+        <i class="fas fa-angle-right" id="next"></i>
+    </div>
+    <div class="pagi">
+        <!--<div class="pagi-elem current">-->
+        <!--</div>-->
+        <!--<div class="pagi-elem">-->
+        <!--</div>-->
+        <!--<div class="pagi-elem">-->
+        <!--</div>-->
+        <!--<div class="pagi-elem">-->
+        <!--</div>-->
+    </div>
+</div>
+
+
+<script>
+    var animTime = 4000, // Задержка между слайдами
+        opacityDelay = 500,
+        autoSlideDelay2,
+        animTime2,
+        autoSlideDelay = 8000; // Начальная задержка
+    $(window).resize(function () {
+        $(".slider").height($(".active").height());
+    });
+
+    $(document).ready(function() {
+        $(".slider").height($(".active").height());
+        console.log($(".slider").height());
+
+        index = $('.active').index(".slide");
+        $('.slide').eq(index).fadeTo(opacityDelay, 1);
+        $('.slide').each(function(i, elem) {
+            $('.pagi').append('<div class="pagi-elem" data-id="'+i+'"></div>');
+            if ($(this).hasClass('active')) { $('.pagi-elem').eq(i).addClass('current') };
+        });
+        delay();
+    });
+
+    $('#next').click(function () {
+        index1 = $('.active').index(".slide");
+        index2 = index1+1;
+        if (index2 == $(".slide").length ) { index2 = 0; }
+        clearTimeout(autoSlideDelay2);
+        clearInterval(animTime2);
+        delay();
+        opacity_refresh(index1, index2);
+    });
+
+    $('#prev').click(function () {
+        index1 = $('.active').index(".slide");
+        index2 = index1-1;
+        if (index2 == -1 ) { index2 = $(".slide").length-1; }
+        clearTimeout(autoSlideDelay2);
+        clearInterval(animTime2);
+        delay();
+        opacity_refresh(index1, index2);
+    });
+
+    $('.pagi').on('click', '.pagi-elem', function () {
+        index1 = $('.active').index(".slide");
+        index2 = $(this).data('id');
+        clearTimeout(autoSlideDelay2);
+        clearInterval(animTime2);
+        delay();
+        opacity_refresh(index1, index2);
+    });
+
+    function opacity_refresh(index1, index2) {
+        $('.pagi-elem').eq(index1).removeClass('current');
+        $('.active').fadeTo(opacityDelay, 0);
+        $('.active').removeClass('active');
+        $('.slide').eq(index2).addClass('active');
+        $('.pagi-elem').eq(index2).addClass('current');
+        $('.slide').eq(index2).fadeTo(opacityDelay, 1);
+        // delay();
+    }
+
+
+    function delay() {
+        autoSlideDelay2 = setTimeout(function() {
+            animTime2 = setInterval(function() {
+                index1 = $('.active').index(".slide");
+                index2 = index1+1;
+                if (index2 == $(".slide").length ) { index2 = 0; }
+                opacity_refresh(index1, index2);
+            }, animTime);
+        }, autoSlideDelay);
+    }
+
+
+</script>
+
+</body>
+</html>
