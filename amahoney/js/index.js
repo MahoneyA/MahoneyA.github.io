@@ -53,7 +53,7 @@
                 $('.pagi').append('<div class="pagi-elem" data-id="'+i+'"></div>');
                 if ($(this).hasClass('active')) { $('.pagi-elem').eq(i).addClass('current') };
             });
-            delay();
+            // delay();
         });
 
         $('#next').click(function () {
