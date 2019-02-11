@@ -85,7 +85,7 @@ $(window).ready(function () {
             $(".slider").height($(".active").height());
         });
 
-        $(document).ready(function() {
+        $(window).load(function() {
             $(".slider").height($(".active").height());
 
             index = $('.active').index(".slide");

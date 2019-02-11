@@ -109,7 +109,6 @@ nav ul li:last-child{
     padding: 10px 100px 0 0;
     z-index: 20;
 }
-
 .shadow {
     -webkit-box-shadow: 0 5px 17px -2px #95cecc;
     -moz-box-shadow: 0 5px 17px -2px #95cecc;
@@ -130,7 +129,6 @@ nav ul li:last-child{
     margin: 130px 0 150px 0;
     display: inline-flex;
 }
-
 .desc_text{
     font-size: 20px;
     color: #dcf3f4;
@@ -223,7 +221,6 @@ hr{
     transition: transform 0.3s;
     transform: translate(-50%, -50%) scale(0);
 }
-
 .pagi-elem.current:before,
 .pagi-elem:hover:before {
     transform: translate(-50%, -50%) scale(1);
@@ -354,6 +351,5 @@ hr{
         margin-left: -7px;
         font-size: 35px;
     }
-
 }
 
