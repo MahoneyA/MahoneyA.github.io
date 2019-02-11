@@ -34,7 +34,7 @@ $(document).ready(function() {
         });
     });
 
-    $(document).ready(function() {
+    $(window).ready(function() {
         var animTime = 4000, // Задержка между слайдами
             opacityDelay = 500,
             autoSlideDelay2,
@@ -44,7 +44,7 @@ $(document).ready(function() {
             $(".slider").height($(".active").height());
         });
 
-        $(document).ready(function() {
+        $(window).ready(function() {
             $(".slider").height($(".active img").height());
 
             index = $('.active').index(".slide");
