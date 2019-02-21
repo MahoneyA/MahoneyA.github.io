@@ -81,12 +81,12 @@ $(window).ready(function () {
             autoSlideDelay2,
             animTime2,
             autoSlideDelay = 8000; // Начальная задержка
-        $(window).resize(function () {
-            $(".slider").height($(".active").height());
-        });
+        // $(window).resize(function () {
+        //     $(".slider").height($(".active").height());
+        // });
 
         $(document).ready(function() {
-            $(".slider").height($(".active").height());
+            // $(".slider").height($(".active").height());
 
             index = $('.active').index(".slide");
             $('.slide').eq(index).fadeTo(opacityDelay, 1);
