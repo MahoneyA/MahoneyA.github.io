@@ -109,12 +109,22 @@
     font-weight: 400;
 
     &.lg-heading {
-      font-size: 4.5rem;
+      font-size: 4rem;
     }
   }
   .boxes{
     div {
       font-size: 1.5rem;
+    }
+  }
+  .menu{
+    .nav-link{
+      padding: 0.4rem;
+    }
+    .portrait{
+      background: url("../img/portraite_esmall.jpg");
+      width: 135px;
+      height: 135px;
     }
   }
 }
