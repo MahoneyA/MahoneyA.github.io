@@ -1,7 +1,7 @@
 //Widescreens
 @include mediaXl{
   .projects{
-grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -71,5 +71,50 @@ grid-template-columns: repeat(3, 1fr);
   }
   .projects{
     grid-template-columns: 1fr;
+  }
+}
+@include mediaM{
+  main{
+    padding: 0.5rem;
+  }
+  .boxes{
+    margin-top: 1.5rem;
+    div{
+      padding: 0 0.2rem;
+    }
+  }
+}
+@include mediaEsm{
+  h1,
+  h2,
+  h3{
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+      font-size: 4rem;
+    }
+  }
+  .boxes{
+    div {
+      font-size: 1.5rem;
+    }
+  }
+}
+@include mediaXsm{
+  h1,
+  h2,
+  h3{
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+      font-size: 4.5rem;
+    }
+  }
+  .boxes{
+    div {
+      font-size: 1.5rem;
+    }
   }
 }
