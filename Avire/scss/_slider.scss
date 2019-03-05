@@ -1,0 +1,102 @@
+$primary-color: #ebebeb;
+$secondary-color: #2772a4;
+@mixin easeOut{
+  transition: all 0.8s ease-out;
+}
+.main-slider {
+  background: #000000;
+  position: relative;
+  width: 100%;
+
+}
+.slider {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  span{
+    text-align: center;
+    padding: 1.875rem 2.1875rem;
+    background-color: rgba(56, 56, 79, 0.6);
+    color: $primary-color;
+    top:30%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    font-size: 2.5rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+}
+.slider .active{
+  z-index: -10;
+  position: relative;
+}
+.slide {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+.navigate {
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  transform: translateY(-50%);
+  font-size: 100px;
+  cursor: pointer;
+  color: $secondary-color;
+  z-index: 1;
+}
+#prev{
+  visibility: hidden;
+  margin-left: 1%;
+  float: left;
+}
+#next{
+  visibility: hidden;
+  margin-right: 1%;
+  float: right;
+}
+.pagi {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.pagi-elem {
+  background: #000;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 2.1rem;
+  height: 1.1rem;
+  margin: 0 0.14rem;
+  border-radius: 3px;
+  //border: 1px solid $secondary-color;
+  cursor: pointer;
+}
+.pagi-elem:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1.8rem;
+  height: 0.7rem;
+  background: $primary-color;
+  border-radius: 2px;
+  @include easeOut;
+  transform: translate(-50%, -50%) scale(0);
+}
+.pagi-elem.current:before,
+.pagi-elem:hover:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+.slide img{
+  width: 100%;
+}
